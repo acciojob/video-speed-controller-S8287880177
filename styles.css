@@ -1,58 +1,54 @@
-body {
-  background: #111;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-family: Arial, sans-serif;
-}
-
 .player {
   max-width: 750px;
-  border: 3px solid #000;
-  background: #000;
+  margin: 20px auto;
+  border: 2px solid #333;
+  background: #222;
+  color: white;
+  font-family: sans-serif;
 }
 
 .viewer {
   width: 100%;
-  max-height: 400px;
+  display: block;
 }
 
 .controls {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding: 10px;
-  background: #222;
-  gap: 10px;
 }
 
-.player__button {
+.player__button,
+.skip {
   background: none;
-  border: 1px solid #fff;
+  border: 1px solid white;
   color: white;
   padding: 5px 10px;
+  margin-right: 5px;
   cursor: pointer;
-}
-
-.player__button:hover {
-  background: #444;
+  font-size: 16px;
 }
 
 .player__slider {
-  width: 100px;
+  margin: 0 10px;
+  cursor: pointer;
 }
 
 .progress {
   flex: 1;
-  height: 8px;
+  height: 10px;
   background: #555;
   cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
   position: relative;
 }
 
 .progress__filled {
   width: 0%;
-  height: 100%;
   background: #f00;
-  flex-basis: 0%;
+  flex: 0;
+  height: 100%;
+  transition: width 0.1s linear;
 }
